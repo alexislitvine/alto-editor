@@ -24,7 +24,7 @@
 						}, "",
 						"/img/spinner.gif",
 						2.0,
-						"http://localhost:3000/", true
+						"https://osiris.hist.cam.ac.uk:3000/", true
 					);
 				}
 				if(viewer) {
@@ -43,7 +43,7 @@
         $('header').insert(new Element("script", {
           "id": "json_alto_jsonp_response",
           "type": "text/javascript", 
-          "src": "http://localhost:3002/?url=http://localhost/alto_edit_pub/example.xml" + "&callback=" + callback + (timestamp ? "&timestamp=" + timestamp : "")
+          "src": "https://osiris.hist.cam.ac.uk:3002/?url=https://osiris.hist.cam.ac.uk/alto_edit_pub/example.xml" + "&callback=" + callback + (timestamp ? "&timestamp=" + timestamp : "")
 				}));
 			}
 
@@ -51,7 +51,7 @@
 				viewer.saveCurrentUpdate();
 				var i = $$('#update_form input').length - 1;
 				if(i > 0) {
-					if(confirm("De laatste wijzigingen zijn niet opgeslagen, wilt u eerste de wijzigingen opslaan?")) {
+					if(confirm("ARE YOU SURE YOU WANT TO DO THIS?")) {
 						$('image_container').hide(); $('ocr_container').hide(); $('spinner_div').show();
 						$('update_form').submit();
 					} else {
@@ -100,8 +100,8 @@
 	</head>
 
 	<body style="font-size: 12px; font-family: arial, sans; line-height: 18px;">
-		<form id="update_form" onsubmit="viewer.saveCurrentUpdate(); $('image_container').hide(); $('ocr_container').hide(); $('spinner_div').show();" action="http://localhost:3002/" method="post" style="float: left">
-			<input type="hidden" name="url" value="http://localhost/alto_edit_pub/example.xml" />
+		<form id="update_form" onsubmit="viewer.saveCurrentUpdate(); $('image_container').hide(); $('ocr_container').hide(); $('spinner_div').show();" action="https://osiris.hist.cam.ac.uk:3002/" method="post" style="float: left">
+			<input type="hidden" name="url" value="https://osiris.hist.cam.ac.uk/alto_edit_pub/example.xml" />
 			<input type="submit" value="Preview" />
 		</form>
 
@@ -116,7 +116,7 @@
 		<div id="ocr_container" style="width: 450px; height: 600px; float: left; margin-left: 20px; border: 1px solid; overflow-y: auto">
 		</div>
 		<div id="spinner_div">
-			<img src="/img/spinner.gif" />
+			<img src="/ALTOEDIT/img/spinner.gif" />
 		</div>
 	</body>
 </html>

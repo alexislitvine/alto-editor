@@ -17,9 +17,7 @@
 #!/usr/bin/ruby
 
 require 'sinatra'
-require 'RMagick'
-require 'simple_get_response'
-
+require 'rmagick'
 
 
 get '/' do

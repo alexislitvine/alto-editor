@@ -15,11 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-require "rubygems"
 require "sinatra"
 require "hpricot"
 require "json"
-require "src/simple_get_response"
 
 def correct_hyphenation(doc)
   #(/\-\s*$/, "-")
